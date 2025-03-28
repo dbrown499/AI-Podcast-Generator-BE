@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
   res.send("Welcome To My Podcast Generator");
 });
 
-const generatorController = require("./controllers/generatorController.js")(genAI);
-app.use("/generator", generatorController);
+const textGeneratorController = require("./controllers/textGeneratorController.js")(genAI);
+app.use("/text-generator", textGeneratorController);
 
 module.exports = app;
